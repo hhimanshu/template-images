@@ -22,16 +22,19 @@ function App() {
     }, [ref])
     return (
         <>
-            <Card className="max-w-xs" ref={ref}>
-                <Text>Sales</Text>
-                <Metric>$ 71,465</Metric>
-                <Flex className="mt-4">
-                    <Text>32% of annual target</Text>
-                    <Text>$ 225,000</Text>
-                </Flex>
-                <ProgressBar value={32} className="mt-2"/>
-            </Card>
-            <button onClick={onButtonClick}>Download</button>
+            <div ref={ref}>
+                <Card className="max-w-xs">
+                    <Text>Sales</Text>
+                    <Metric>$ 71,465</Metric>
+                    <Flex className="mt-4">
+                        <Text>32% of annual target</Text>
+                        <Text>$ 225,000</Text>
+                    </Flex>
+                    <ProgressBar value={32} className="mt-2"/>
+                </Card>
+
+            </div>
+            <button className="mt-4 border-2 py-2 px-4 border-blue-400 rounded-lg" onClick={onButtonClick}>Download</button>
         </>
     )
 }
